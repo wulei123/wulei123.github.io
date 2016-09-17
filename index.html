@@ -135,6 +135,67 @@
       <div class="body-wrap">
         
   
+    <article id="post-centos7.2下nginx无法访问的问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/17/centos7.2下nginx无法访问的问题/">centos7.2下nginx无法访问的问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>我在centos7.2安装了nginx却外网不能访问，查了下才发现centos7.2 下默认是firewalld，代替了iptables，安装nginx后，80端口是不开放的，所以外网是无法访问的</p>
+<p>解决方法:</p>
+<ol>
+<li>添加http,https到/etc/firewalld/zones/public.xml中</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">zone</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">short</span>&gt;</span>Public<span class="tag">&lt;/<span class="name">short</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">description</span>&gt;</span>For use in public areas. You do not trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">name</span>=<span class="string">"http"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">name</span>=<span class="string">"https"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">name</span>=<span class="string">"ssh"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">zone</span>&gt;</span></div></pre></td></tr></table></figure>
+<ol>
+<li><p>执行firewall-cmd –reload</p>
+</li>
+<li><p>重启nginx服务 systemctl restart nginx</p>
+</li>
+</ol>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/09/17/centos7.2下nginx无法访问的问题/" class="archive-article-date">
+  	<time datetime="2016-09-17T04:45:50.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-17</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos7-2/">centos7.2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-测试" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -189,82 +250,6 @@
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/">test</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/15/我的第一篇博客/">我的第一篇博客</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#一级标题</p>
-<p>##二级标题</p>
-<p>###三级标题</p>
-<blockquote>
-<p>这是引用</p>
-<p>例如这样</p>
-</blockquote>
-<p>###无序列表</p>
-<ul>
-<li>1</li>
-<li>2</li>
-</ul>
-<p>###有序列表</p>
-<ol>
-<li>1</li>
-<li>2</li>
-<li>3<br><img src="http://i4.piimg.com/567571/4af6d37fc126ff6e.jpg" alt=""><br><img src="http://mouapp.com/Mou_128.png" alt="Mou icon"></li>
-</ol>
-<p><em>我是一个不怎么用博客的人(斜体)</em><br><strong>我是一个不怎么用博客的人(粗体)</strong></p>
-<blockquote>
-<p>代码块</p>
-</blockquote>
-<p><code>var http = require(&#39;http&#39;);</code></p>
-<blockquote>
-<p>js代码块</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/09/15/我的第一篇博客/" class="archive-article-date">
-  	<time datetime="2016-09-15T14:20:52.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-15</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
 	</div>
 
       
@@ -421,7 +406,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    				<a href="/tags/centos7-2/" style="font-size: 10px;">centos7.2</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/test/" style="font-size: 10px;">test</a>
     			</div>
     	</section>
     
