@@ -4,14 +4,33 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>一个小白的代码之路</title>
+  <title>PHP接入微信公众平台 | 一个小白的代码之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="一个小白的代码之路">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="php接入微信公众平台关于登录注册申请这些部分就不说了，本文主要讲PHP方法接入微信平台
+查看微信官方文档
+
+PHP代码
+
+12345678910111213141516&amp;lt;?php        $signature = $_GET[&quot;signature&quot;];        $timestamp = $_GET[&quot;timestamp&quot;];        $nonce = $_GET[&quot;non">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP接入微信公众平台">
+<meta property="og:url" content="http://yoursite.com/2016/09/18/PHP接入微信公众平台/index.html">
 <meta property="og:site_name" content="一个小白的代码之路">
+<meta property="og:description" content="php接入微信公众平台关于登录注册申请这些部分就不说了，本文主要讲PHP方法接入微信平台
+查看微信官方文档
+
+PHP代码
+
+12345678910111213141516&amp;lt;?php        $signature = $_GET[&quot;signature&quot;];        $timestamp = $_GET[&quot;timestamp&quot;];        $nonce = $_GET[&quot;non">
+<meta property="og:updated_time" content="2016-09-18T11:45:08.724Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一个小白的代码之路">
+<meta name="twitter:title" content="PHP接入微信公众平台">
+<meta name="twitter:description" content="php接入微信公众平台关于登录注册申请这些部分就不说了，本文主要讲PHP方法接入微信平台
+查看微信官方文档
+
+PHP代码
+
+12345678910111213141516&amp;lt;?php        $signature = $_GET[&quot;signature&quot;];        $timestamp = $_GET[&quot;timestamp&quot;];        $nonce = $_GET[&quot;non">
   
     <link rel="alternative" href="/atom.xml" title="一个小白的代码之路" type="application/atom+xml">
   
@@ -133,9 +152,7 @@
 </nav>
 
       <div class="body-wrap">
-        
-  
-    <article id="post-PHP接入微信公众平台" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-PHP接入微信公众平台" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -144,8 +161,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/18/PHP接入微信公众平台/">PHP接入微信公众平台</a>
+    <h1 class="article-title" itemprop="name">
+      PHP接入微信公众平台
     </h1>
   
 
@@ -188,78 +205,64 @@
   </div>
 </article>
 
-
-
-
-
-
-
-
-
-
   
-    <article id="post-centos7.2下nginx无法访问的问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/17/centos7.2下nginx无法访问的问题/">centos7.2下nginx无法访问的问题</a>
-    </h1>
   
+    <a href="/2016/09/17/centos7.2下nginx无法访问的问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">centos7.2下nginx无法访问的问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我在centos7.2安装了nginx却外网不能访问，查了下才发现centos7.2 下默认是firewalld，代替了iptables，安装nginx后，80端口是不开放的，所以外网是无法访问的</p>
-<p>解决方法:</p>
-<ol>
-<li>添加http,https到/etc/firewalld/zones/public.xml中</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</div><div class="line"><span class="tag">&lt;<span class="name">zone</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">short</span>&gt;</span>Public<span class="tag">&lt;/<span class="name">short</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">description</span>&gt;</span>For use in public areas. You do not trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">name</span>=<span class="string">"http"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">name</span>=<span class="string">"https"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">name</span>=<span class="string">"ssh"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">zone</span>&gt;</span></div></pre></td></tr></table></figure>
-<ol>
-<li><p>执行firewall-cmd –reload</p>
-</li>
-<li><p>重启nginx服务 systemctl restart nginx</p>
-</li>
-</ol>
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/09/17/centos7.2下nginx无法访问的问题/" class="archive-article-date">
-  	<time datetime="2016-09-17T04:45:50.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-17</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos7-2/">centos7.2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firewalld/">firewalld</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="PHP接入微信公众平台" data-title="PHP接入微信公众平台" data-url="http://yoursite.com/2016/09/18/PHP接入微信公众平台/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"wulei123"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
-
-  
-  
 
 
       </div>
@@ -281,8 +284,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
