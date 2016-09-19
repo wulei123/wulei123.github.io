@@ -135,6 +135,64 @@
       <div class="body-wrap">
         
   
+    <article id="post-PHP微信自定义菜单实现" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/19/PHP微信自定义菜单实现/">PHP微信自定义菜单实现</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>简单实现微信的自定义菜单</code></p>
+<p><a href="https://mp.weixin.qq.com/wiki/10/0234e39a2025342c17a7d23595c6b40a.html" target="_blank" rel="external">查看微信官方文档</a></p>
+<blockquote>
+<p>php代码</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">&lt;?php</span></div><div class="line">	define(<span class="string">'ACCESS_TOKEN'</span>,YOUR_TOKEN);</div><div class="line"></div><div class="line"><span class="comment">//创建菜单</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMenu</span><span class="params">($data)</span></span>&#123;</div><div class="line">$curl = curl_init();</div><div class="line">curl_setopt($curl, CURLOPT_URL, <span class="string">"https://api.weixin.qq.com/cgi-bin/menu/create?access_token="</span>.ACCESS_TOKEN);<span class="comment">//	需要获取的URL地址，也可以在curl_init()函数中设置。</span></div><div class="line"><span class="comment">// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");</span></div><div class="line">curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, <span class="keyword">FALSE</span>);<span class="comment">//	禁用后cURL将终止从服务端进行验证。使用CURLOPT_CAINFO选项设置证书使用CURLOPT_CAPATH选项设置证书目录 如果CURLOPT_SSL_VERIFYPEER(默认值为2)被启用，CURLOPT_SSL_VERIFYHOST需要被设置成TRUE否则设置为FALSE。	自cURL 7.10开始默认为TRUE。从cURL 7.10开始默认绑定安装。</span></div><div class="line">curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, <span class="keyword">FALSE</span>);<span class="comment">//	1 检查服务器SSL证书中是否存在一个公用名(common name)。译者注：公用名(Common Name)一般来讲就是填写你将要申请SSL证书的域名 (domain)或子域名(sub domain)。2 检查公用名是否存在，并且是否与提供的主机名匹配。</span></div><div class="line">curl_setopt($curl, CURLOPT_USERAGENT, <span class="string">'Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)'</span>);<span class="comment">//在HTTP请求中包含一个"User-Agent: "头的字符串。</span></div><div class="line">curl_setopt($curl, CURLOPT_FOLLOWLOCATION, <span class="number">1</span>);<span class="comment">//	启用时会将服务器服务器返回的"Location: "放在header中递归的返回给服务器，使用CURLOPT_MAXREDIRS可以限定递归返回的数量。</span></div><div class="line">curl_setopt($curl, CURLOPT_AUTOREFERER, <span class="number">1</span>);<span class="comment">//	当根据Location:重定向时，自动设置header中的Referer:信息。</span></div><div class="line">curl_setopt($curl, CURLOPT_POSTFIELDS, $data);<span class="comment">//	全部数据使用HTTP协议中的"POST"操作来发送。要发送文件，在文件名前面加上@前缀并使用完整路径。这个参数可以通过urlencoded后的字符串类似'para1=val1&amp;para2=val2&amp;...'或使用一个以字段名为键值，字段数据为值的数组。如果value是一个数组，Content-Type头将会被设置成multipart/form-data。</span></div><div class="line">curl_setopt($curl, CURLOPT_RETURNTRANSFER, <span class="keyword">true</span>);<span class="comment">//在启用CURLOPT_RETURNTRANSFER的时候，返回原生的（Raw）输出。</span></div><div class="line">$tmpInfo = curl_exec($curl);</div><div class="line"><span class="keyword">if</span> (curl_errno($curl)) &#123;</div><div class="line">  <span class="keyword">return</span> curl_error($curl);</div><div class="line">&#125;</div><div class="line">curl_close($curl);</div><div class="line"><span class="keyword">return</span> $tmpInfo;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//获取菜单</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getMenu</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="keyword">return</span> file_get_contents(<span class="string">"https://api.weixin.qq.com/cgi-bin/menu/get?access_token="</span>.ACCESS_TOKEN);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//删除菜单</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">deleteMenu</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="keyword">return</span> file_get_contents(<span class="string">"https://api.weixin.qq.com/cgi-bin/menu/delete?access_token="</span>.ACCESS_TOKEN);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">$data = <span class="string">' &#123;</span></div><div class="line">     "button":[</div><div class="line">     &#123;</div><div class="line">          "type":"click",</div><div class="line">          "name":"今日歌曲",</div><div class="line">          "key":"V1001_TODAY_MUSIC"</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">           "name":"菜单",</div><div class="line">           "sub_button":[</div><div class="line">           &#123;</div><div class="line">               "type":"view",</div><div class="line">               "name":"搜索",</div><div class="line">               "url":"http://www.soso.com/"</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               "type":"view",</div><div class="line">               "name":"视频",</div><div class="line">               "url":"http://v.qq.com/"</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               "type":"click",</div><div class="line">               "name":"赞一下我们",</div><div class="line">               "key":"V1001_GOOD"</div><div class="line">            &#125;]</div><div class="line">       &#125;]</div><div class="line"> &#125;';</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">echo</span> createMenu($data);</div><div class="line"><span class="keyword">echo</span> getMenu();</div><div class="line"><span class="keyword">echo</span> deleteMenu();</div></pre></td></tr></table></figure>
+<blockquote>
+<p>看一下返回的json就知道是不是接入成功啦</p>
+</blockquote>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/09/19/PHP微信自定义菜单实现/" class="archive-article-date">
+  	<time datetime="2016-09-19T15:19:24.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-19</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/curl/">curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-PHP接入微信公众平台" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -343,7 +401,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/centos7-2/" style="font-size: 10px;">centos7.2</a> <a href="/tags/firewalld/" style="font-size: 10px;">firewalld</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/微信开发/" style="font-size: 10px;">微信开发</a>
+    				<a href="/tags/centos7-2/" style="font-size: 10px;">centos7.2</a> <a href="/tags/curl/" style="font-size: 10px;">curl</a> <a href="/tags/firewalld/" style="font-size: 10px;">firewalld</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/微信开发/" style="font-size: 20px;">微信开发</a>
     			</div>
     	</section>
     

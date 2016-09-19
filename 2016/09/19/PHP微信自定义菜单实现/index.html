@@ -4,33 +4,33 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>centos7.2下nginx无法访问的问题 | 一个小白的代码之路</title>
+  <title>PHP微信自定义菜单实现 | 一个小白的代码之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我在centos7.2安装了nginx却外网不能访问，查了下才发现centos7.2 下默认是firewalld，代替了iptables，安装nginx后，80端口是不开放的，所以外网是无法访问的
-解决方法:
+  <meta name="description" content="简单实现微信的自定义菜单
+查看微信官方文档
 
-添加http,https到/etc/firewalld/zones/public.xml中
+php代码
 
-12345678&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;">
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273&amp;lt;?php	define(&apos;ACCESS_TOKEN&apos;,YO">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos7.2下nginx无法访问的问题">
-<meta property="og:url" content="http://yoursite.com/2016/09/17/centos7.2下nginx无法访问的问题/index.html">
+<meta property="og:title" content="PHP微信自定义菜单实现">
+<meta property="og:url" content="http://yoursite.com/2016/09/19/PHP微信自定义菜单实现/index.html">
 <meta property="og:site_name" content="一个小白的代码之路">
-<meta property="og:description" content="我在centos7.2安装了nginx却外网不能访问，查了下才发现centos7.2 下默认是firewalld，代替了iptables，安装nginx后，80端口是不开放的，所以外网是无法访问的
-解决方法:
+<meta property="og:description" content="简单实现微信的自定义菜单
+查看微信官方文档
 
-添加http,https到/etc/firewalld/zones/public.xml中
+php代码
 
-12345678&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;">
-<meta property="og:updated_time" content="2016-09-18T10:02:46.630Z">
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273&amp;lt;?php	define(&apos;ACCESS_TOKEN&apos;,YO">
+<meta property="og:updated_time" content="2016-09-19T15:29:55.910Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centos7.2下nginx无法访问的问题">
-<meta name="twitter:description" content="我在centos7.2安装了nginx却外网不能访问，查了下才发现centos7.2 下默认是firewalld，代替了iptables，安装nginx后，80端口是不开放的，所以外网是无法访问的
-解决方法:
+<meta name="twitter:title" content="PHP微信自定义菜单实现">
+<meta name="twitter:description" content="简单实现微信的自定义菜单
+查看微信官方文档
 
-添加http,https到/etc/firewalld/zones/public.xml中
+php代码
 
-12345678&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;">
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273&amp;lt;?php	define(&apos;ACCESS_TOKEN&apos;,YO">
   
     <link rel="alternative" href="/atom.xml" title="一个小白的代码之路" type="application/atom+xml">
   
@@ -152,7 +152,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-centos7.2下nginx无法访问的问题" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-PHP微信自定义菜单实现" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -162,7 +162,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      centos7.2下nginx无法访问的问题
+      PHP微信自定义菜单实现
     </h1>
   
 
@@ -170,30 +170,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>我在centos7.2安装了nginx却外网不能访问，查了下才发现centos7.2 下默认是firewalld，代替了iptables，安装nginx后，80端口是不开放的，所以外网是无法访问的</p>
-<p>解决方法:</p>
-<ol>
-<li>添加http,https到/etc/firewalld/zones/public.xml中</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span><span class="meta">?&gt;</span></span></div><div class="line"><span class="tag">&lt;<span class="name">zone</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">short</span>&gt;</span>Public<span class="tag">&lt;/<span class="name">short</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">description</span>&gt;</span>For use in public areas. You do not trust the other computers on networks to not harm your computer. Only selected incoming connections are accepted.<span class="tag">&lt;/<span class="name">description</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">name</span>=<span class="string">"http"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">name</span>=<span class="string">"https"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">service</span> <span class="attr">name</span>=<span class="string">"ssh"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">zone</span>&gt;</span></div></pre></td></tr></table></figure>
-<ol>
-<li><p>执行firewall-cmd –reload</p>
-</li>
-<li><p>重启nginx服务 systemctl restart nginx</p>
-</li>
-</ol>
+        <p><code>简单实现微信的自定义菜单</code></p>
+<p><a href="https://mp.weixin.qq.com/wiki/10/0234e39a2025342c17a7d23595c6b40a.html" target="_blank" rel="external">查看微信官方文档</a></p>
+<blockquote>
+<p>php代码</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">&lt;?php</span></div><div class="line">	define(<span class="string">'ACCESS_TOKEN'</span>,YOUR_TOKEN);</div><div class="line"></div><div class="line"><span class="comment">//创建菜单</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMenu</span><span class="params">($data)</span></span>&#123;</div><div class="line">$curl = curl_init();</div><div class="line">curl_setopt($curl, CURLOPT_URL, <span class="string">"https://api.weixin.qq.com/cgi-bin/menu/create?access_token="</span>.ACCESS_TOKEN);<span class="comment">//	需要获取的URL地址，也可以在curl_init()函数中设置。</span></div><div class="line"><span class="comment">// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");</span></div><div class="line">curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, <span class="keyword">FALSE</span>);<span class="comment">//	禁用后cURL将终止从服务端进行验证。使用CURLOPT_CAINFO选项设置证书使用CURLOPT_CAPATH选项设置证书目录 如果CURLOPT_SSL_VERIFYPEER(默认值为2)被启用，CURLOPT_SSL_VERIFYHOST需要被设置成TRUE否则设置为FALSE。	自cURL 7.10开始默认为TRUE。从cURL 7.10开始默认绑定安装。</span></div><div class="line">curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, <span class="keyword">FALSE</span>);<span class="comment">//	1 检查服务器SSL证书中是否存在一个公用名(common name)。译者注：公用名(Common Name)一般来讲就是填写你将要申请SSL证书的域名 (domain)或子域名(sub domain)。2 检查公用名是否存在，并且是否与提供的主机名匹配。</span></div><div class="line">curl_setopt($curl, CURLOPT_USERAGENT, <span class="string">'Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)'</span>);<span class="comment">//在HTTP请求中包含一个"User-Agent: "头的字符串。</span></div><div class="line">curl_setopt($curl, CURLOPT_FOLLOWLOCATION, <span class="number">1</span>);<span class="comment">//	启用时会将服务器服务器返回的"Location: "放在header中递归的返回给服务器，使用CURLOPT_MAXREDIRS可以限定递归返回的数量。</span></div><div class="line">curl_setopt($curl, CURLOPT_AUTOREFERER, <span class="number">1</span>);<span class="comment">//	当根据Location:重定向时，自动设置header中的Referer:信息。</span></div><div class="line">curl_setopt($curl, CURLOPT_POSTFIELDS, $data);<span class="comment">//	全部数据使用HTTP协议中的"POST"操作来发送。要发送文件，在文件名前面加上@前缀并使用完整路径。这个参数可以通过urlencoded后的字符串类似'para1=val1&amp;para2=val2&amp;...'或使用一个以字段名为键值，字段数据为值的数组。如果value是一个数组，Content-Type头将会被设置成multipart/form-data。</span></div><div class="line">curl_setopt($curl, CURLOPT_RETURNTRANSFER, <span class="keyword">true</span>);<span class="comment">//在启用CURLOPT_RETURNTRANSFER的时候，返回原生的（Raw）输出。</span></div><div class="line">$tmpInfo = curl_exec($curl);</div><div class="line"><span class="keyword">if</span> (curl_errno($curl)) &#123;</div><div class="line">  <span class="keyword">return</span> curl_error($curl);</div><div class="line">&#125;</div><div class="line">curl_close($curl);</div><div class="line"><span class="keyword">return</span> $tmpInfo;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//获取菜单</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getMenu</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="keyword">return</span> file_get_contents(<span class="string">"https://api.weixin.qq.com/cgi-bin/menu/get?access_token="</span>.ACCESS_TOKEN);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//删除菜单</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">deleteMenu</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="keyword">return</span> file_get_contents(<span class="string">"https://api.weixin.qq.com/cgi-bin/menu/delete?access_token="</span>.ACCESS_TOKEN);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">$data = <span class="string">' &#123;</span></div><div class="line">     "button":[</div><div class="line">     &#123;</div><div class="line">          "type":"click",</div><div class="line">          "name":"今日歌曲",</div><div class="line">          "key":"V1001_TODAY_MUSIC"</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">           "name":"菜单",</div><div class="line">           "sub_button":[</div><div class="line">           &#123;</div><div class="line">               "type":"view",</div><div class="line">               "name":"搜索",</div><div class="line">               "url":"http://www.soso.com/"</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               "type":"view",</div><div class="line">               "name":"视频",</div><div class="line">               "url":"http://v.qq.com/"</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               "type":"click",</div><div class="line">               "name":"赞一下我们",</div><div class="line">               "key":"V1001_GOOD"</div><div class="line">            &#125;]</div><div class="line">       &#125;]</div><div class="line"> &#125;';</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">echo</span> createMenu($data);</div><div class="line"><span class="keyword">echo</span> getMenu();</div><div class="line"><span class="keyword">echo</span> deleteMenu();</div></pre></td></tr></table></figure>
+<blockquote>
+<p>看一下返回的json就知道是不是接入成功啦</p>
+</blockquote>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/09/17/centos7.2下nginx无法访问的问题/" class="archive-article-date">
-  	<time datetime="2016-09-17T04:45:50.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-17</time>
+      <a href="/2016/09/19/PHP微信自定义菜单实现/" class="archive-article-date">
+  	<time datetime="2016-09-19T15:19:24.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-19</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos7-2/">centos7.2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firewalld/">firewalld</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/curl/">curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
 	</div>
 
       
@@ -206,15 +203,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/09/18/PHP接入微信公众平台/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          PHP接入微信公众平台
-        
-      </div>
-    </a>
   
+    <a href="/2016/09/18/PHP接入微信公众平台/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PHP接入微信公众平台</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -246,7 +239,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="centos7.2下nginx无法访问的问题" data-title="centos7.2下nginx无法访问的问题" data-url="http://yoursite.com/2016/09/17/centos7.2下nginx无法访问的问题/"></div>
+	<div class="ds-thread" data-thread-key="PHP微信自定义菜单实现" data-title="PHP微信自定义菜单实现" data-url="http://yoursite.com/2016/09/19/PHP微信自定义菜单实现/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
