@@ -4,33 +4,33 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>PHP接入微信公众平台 | 一个小白的代码之路</title>
+  <title>PHP接入微信公众号获取access_token | 一个小白的代码之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于登录注册申请这些部分就不说了，本文主要讲PHP方法接入微信平台
-查看微信官方文档
+  <meta name="description" content="微信获取access_token的代码示例和一些curl的使用备忘
+微信官方文档;
 
-PHP代码
+用file_get_contents()获取access_token
 
-12345678910111213141516&amp;lt;?php        $signature = $_GET[&quot;signature&quot;];        $timestamp = $_GET[&quot;timestamp&quot;];        $nonce = $_GET[&quot;nonce&quot;];">
+这个的获取比较简单,但是access_token每天的调用是有次数限制的。每一次请求都会刷新掉旧的，使旧的失效，每个access_token的时间是两个小时，可以用写入文件的方法来记录每一次access_token12345678910111">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PHP接入微信公众平台">
-<meta property="og:url" content="http://yoursite.com/2016/09/18/PHP接入微信公众平台/index.html">
+<meta property="og:title" content="PHP接入微信公众号获取access_token">
+<meta property="og:url" content="http://yoursite.com/2016/09/20/PHP接入微信公众号获取access-token/index.html">
 <meta property="og:site_name" content="一个小白的代码之路">
-<meta property="og:description" content="关于登录注册申请这些部分就不说了，本文主要讲PHP方法接入微信平台
-查看微信官方文档
+<meta property="og:description" content="微信获取access_token的代码示例和一些curl的使用备忘
+微信官方文档;
 
-PHP代码
+用file_get_contents()获取access_token
 
-12345678910111213141516&amp;lt;?php        $signature = $_GET[&quot;signature&quot;];        $timestamp = $_GET[&quot;timestamp&quot;];        $nonce = $_GET[&quot;nonce&quot;];">
-<meta property="og:updated_time" content="2016-09-18T13:34:14.748Z">
+这个的获取比较简单,但是access_token每天的调用是有次数限制的。每一次请求都会刷新掉旧的，使旧的失效，每个access_token的时间是两个小时，可以用写入文件的方法来记录每一次access_token12345678910111">
+<meta property="og:updated_time" content="2016-09-20T11:32:46.417Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PHP接入微信公众平台">
-<meta name="twitter:description" content="关于登录注册申请这些部分就不说了，本文主要讲PHP方法接入微信平台
-查看微信官方文档
+<meta name="twitter:title" content="PHP接入微信公众号获取access_token">
+<meta name="twitter:description" content="微信获取access_token的代码示例和一些curl的使用备忘
+微信官方文档;
 
-PHP代码
+用file_get_contents()获取access_token
 
-12345678910111213141516&amp;lt;?php        $signature = $_GET[&quot;signature&quot;];        $timestamp = $_GET[&quot;timestamp&quot;];        $nonce = $_GET[&quot;nonce&quot;];">
+这个的获取比较简单,但是access_token每天的调用是有次数限制的。每一次请求都会刷新掉旧的，使旧的失效，每个access_token的时间是两个小时，可以用写入文件的方法来记录每一次access_token12345678910111">
   
     <link rel="alternative" href="/atom.xml" title="一个小白的代码之路" type="application/atom+xml">
   
@@ -152,7 +152,7 @@ PHP代码
 </nav>
 
       <div class="body-wrap">
-        <article id="post-PHP接入微信公众平台" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-PHP接入微信公众号获取access-token" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -162,7 +162,7 @@ PHP代码
         
   
     <h1 class="article-title" itemprop="name">
-      PHP接入微信公众平台
+      PHP接入微信公众号获取access_token
     </h1>
   
 
@@ -170,32 +170,28 @@ PHP代码
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><code>关于登录注册申请这些部分就不说了，本文主要讲PHP方法接入微信平台</code></p>
-<p><a href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=mp1421135319&amp;token=&amp;lang=zh_CN" target="_blank" rel="external">查看微信官方文档</a></p>
+        <p><code>微信获取access_token的代码示例和一些curl的使用备忘</code></p>
+<p><a href="https://mp.weixin.qq.com/wiki/14/9f9c82c1af308e3b14ba9b973f99a8ba.html" target="_blank" rel="external">微信官方文档</a>;</p>
 <blockquote>
-<p>PHP代码</p>
+<p>用file_get_contents()获取access_token</p>
 </blockquote>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">        $signature = $_GET[<span class="string">"signature"</span>];</div><div class="line">        $timestamp = $_GET[<span class="string">"timestamp"</span>];</div><div class="line">        $nonce = $_GET[<span class="string">"nonce"</span>];</div><div class="line">        $echostr = $_GET[<span class="string">"echostr"</span>];</div><div class="line">        $token = YOUR_TOKEN;<span class="comment">//替换为在公众平台填写的token</span></div><div class="line">        $tmpArr = <span class="keyword">array</span>($token, $timestamp, $nonce);</div><div class="line">        sort($tmpArr, SORT_STRING);<span class="comment">//将数组中的字符串按字典序排序</span></div><div class="line">        $tmpStr = implode( $tmpArr );<span class="comment">//将所有字符串拼接起来</span></div><div class="line">        $tmpStr = sha1( $tmpStr );<span class="comment">//用sha1加密</span></div><div class="line"></div><div class="line">        <span class="keyword">if</span>( $tmpStr == $signature )&#123;</div><div class="line">            <span class="keyword">echo</span> $echostr;<span class="comment">//必须echo传来的echostr参数作为响应</span></div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">echo</span> <span class="keyword">false</span>;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<p><code>这个的获取比较简单,但是access_token每天的调用是有次数限制的。每一次请求都会刷新掉旧的，使旧的失效，每个access_token的时间是两个小时，可以用写入文件的方法来记录每一次access_token</code><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">  define(<span class="string">'APP_ID'</span>,YOUR_APP_ID);</div><div class="line">  define(<span class="string">'APP_SECRET'</span>,YOUR_APP_SECRET);</div><div class="line"><span class="comment">/**</span></div><div class="line"> * <span class="doctag">@return</span> mixed</div><div class="line"> *</div><div class="line"> */</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">get_access_token</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(file_exists(<span class="string">'./token'</span>) &amp;&amp; time()-fileatime(<span class="string">'./token'</span>)&lt;<span class="number">5000</span>)&#123;</div><div class="line">            $at = file_get_contents(<span class="string">'./token'</span>);</div><div class="line">            $at = json_decode($at,<span class="keyword">true</span>);<span class="comment">//当此处为true时，返回的是数组而非对象</span></div><div class="line">            <span class="keyword">return</span> $at[<span class="string">'access_token'</span>];</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            $at = file_get_contents(<span class="string">'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid='</span>.APP_ID.<span class="string">'&amp;secret='</span>.APP_SECRET);</div><div class="line">            file_put_contents(<span class="string">'./token'</span>,$at);</div><div class="line">            $at = json_decode($at,<span class="keyword">true</span>);<span class="comment">//当此处为true时，返回的是数组而非对象</span></div><div class="line">            <span class="keyword">return</span> $at[<span class="string">'access_token'</span>];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">echo</span> get_access_token();</div></pre></td></tr></table></figure></p>
 <blockquote>
-<p>有些时候会出现token验证失败，下面给出一种记录访问http请求来查看来自微信服务器的请求是否传到并且是否与服务器生成的$tmpstr是否相同的方法</p>
+<p>用curl中的GET请求来获取的PHP代码示例(附上<a href="http://www.educity.cn/develop/406212.html" target="_blank" rel="external">CURL各个参数的功能说明</a>)</p>
 </blockquote>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">        $signature = $_GET[<span class="string">"signature"</span>];</div><div class="line">        $timestamp = $_GET[<span class="string">"timestamp"</span>];</div><div class="line">        $nonce = $_GET[<span class="string">"nonce"</span>];</div><div class="line">        $echostr = $_GET[<span class="string">"echostr"</span>];</div><div class="line">        $token = YOUR_TOKEN;<span class="comment">//替换为在公众平台填写的token</span></div><div class="line">        $tmpArr = <span class="keyword">array</span>($token, $timestamp, $nonce);</div><div class="line">        sort($tmpArr, SORT_STRING);<span class="comment">//将数组中的字符串按字典序排序</span></div><div class="line">        $tmpStr = implode( $tmpArr );<span class="comment">//将所有字符串拼接起来</span></div><div class="line">        $tmpStr = sha1( $tmpStr );<span class="comment">//用sha1加密</span></div><div class="line">        logRequest(<span class="string">" ip: "</span>.$_SERVER[<span class="string">'REMOTE_ADDR'</span>].<span class="string">" string: "</span>.$_SERVER[<span class="string">'QUERY_STRING'</span>]);</div><div class="line">        <span class="keyword">if</span>( $tmpStr == $signature )&#123;</div><div class="line">            <span class="keyword">echo</span> $echostr;<span class="comment">//必须echo传来的echostr参数作为响应</span></div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">echo</span> <span class="keyword">false</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">logRequest</span><span class="params">($data)</span></span>&#123;</div><div class="line">          file_put_contents(<span class="string">'logRequest.html'</span>,date(<span class="string">'Y-m-d H:i:s'</span>).$data.<span class="string">"&lt;br&gt;"</span>,FILE_APPEND);</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
-<p>每次在公众号点击提交后,服务器端会把每次请求储存在logRequest.html中,直接在浏览器中访问就可以看到,如果为空的话,并且以上的代码没有问题,基本就是你URL填写或者其他啥的问题了</p>
-<blockquote>
-<p>最后提交成功后，点击启用就可以了，微信平台就接入了你的服务器(本文有错的话请留言…)</p>
-</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="number">7000</span>)&#123;</div><div class="line">			$access_token = file_get_contents(<span class="string">'./token'</span>);</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			$url = <span class="string">'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid='</span>.APP_ID.<span class="string">'&amp;secret='</span>.APP_SECRET;</div><div class="line">			$curl = curl_init();</div><div class="line">			curl_setopt($curl,CURLOPT_URL,$url);</div><div class="line">			curl_setopt($curl,CURLOPT_SSL_VERIFYPEER,<span class="keyword">FALSE</span>);<span class="comment">//禁 用后cURL将终止从服务端进行验证。使用CURLOPT_CAINFO选项设置证书使用CURLOPT_CAPATH选项设置证书目录 如果CURLOPT_SSL_VERIFYPEER(默认值为2)被启用，CURLOPT_SSL_VERIFYHOST需要被设置成TRUE否则设置为 FALSE。</span></div><div class="line">自cURL <span class="number">7.10</span>开始默认为<span class="keyword">TRUE</span>。从cURL <span class="number">7.10</span>开始默认绑定安装。</div><div class="line">			curl_setopt($curl,CURLOPT_SSL_VERIFYHOST,<span class="keyword">FALSE</span>);<span class="comment">//1 检查服务器SSL证书中是否存在一个公用名(common name)。译者注：公用名(Common Name)一般来讲就是填写你将要申请SSL证书的域名 (domain)或子域名(sub domain)。2 检查公用名是否存在，并且是否与提供的主机名匹配。</span></div><div class="line">			curl_setopt($curl,CURLOPT_RETURNTRANSFER,<span class="number">1</span>);<span class="comment">//使用PHP curl获取页面内容或提交数据，有时候希望返回的内容作为变量储存，而不是直接输出</span></div><div class="line">			$outInfo = curl_exec($curl);</div><div class="line">			<span class="keyword">echo</span> $outInfo;</div><div class="line">			curl_close($curl);</div><div class="line">			$tmp = json_decode($outInfo,<span class="keyword">TRUE</span>);</div><div class="line">			$access_token = $tmp[<span class="string">'access_token'</span>];</div><div class="line">			file_put_contents(<span class="string">'./token'</span>,$access_token);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> $access_token;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/09/18/PHP接入微信公众平台/" class="archive-article-date">
-  	<time datetime="2016-09-18T10:04:19.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-18</time>
+      <a href="/2016/09/20/PHP接入微信公众号获取access-token/" class="archive-article-date">
+  	<time datetime="2016-09-20T11:07:00.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-20</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/curl/">curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
 	</div>
 
       
@@ -208,18 +204,9 @@ PHP代码
   
 <nav id="article-nav">
   
-    <a href="/2016/09/19/PHP微信自定义菜单实现/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          PHP微信自定义菜单实现
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/09/17/centos7.2下nginx无法访问的问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">centos7.2下nginx无法访问的问题</div>
+    <a href="/2016/09/19/PHP微信自定义菜单实现/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PHP微信自定义菜单实现</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -253,7 +240,7 @@ PHP代码
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="PHP接入微信公众平台" data-title="PHP接入微信公众平台" data-url="http://yoursite.com/2016/09/18/PHP接入微信公众平台/"></div>
+	<div class="ds-thread" data-thread-key="PHP接入微信公众号获取access-token" data-title="PHP接入微信公众号获取access_token" data-url="http://yoursite.com/2016/09/20/PHP接入微信公众号获取access-token/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
