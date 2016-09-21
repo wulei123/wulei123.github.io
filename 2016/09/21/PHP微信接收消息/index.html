@@ -4,14 +4,33 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: nginx | 一个小白的代码之路</title>
+  <title>PHP微信接收消息 | 一个小白的代码之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="一个小白的代码之路">
-<meta property="og:url" content="http://yoursite.com/tags/nginx/index.html">
+  <meta name="description" content="微信接受文本消息
+微信官方文档
+
+php代码
+
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&amp;lt;?php     vaild();    function vaild()&amp;#123;        $signature = $_GET[&quot;signature&quot;];">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP微信接收消息">
+<meta property="og:url" content="http://yoursite.com/2016/09/21/PHP微信接收消息/index.html">
 <meta property="og:site_name" content="一个小白的代码之路">
+<meta property="og:description" content="微信接受文本消息
+微信官方文档
+
+php代码
+
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&amp;lt;?php     vaild();    function vaild()&amp;#123;        $signature = $_GET[&quot;signature&quot;];">
+<meta property="og:updated_time" content="2016-09-21T15:13:06.245Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一个小白的代码之路">
+<meta name="twitter:title" content="PHP微信接收消息">
+<meta name="twitter:description" content="微信接受文本消息
+微信官方文档
+
+php代码
+
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&amp;lt;?php     vaild();    function vaild()&amp;#123;        $signature = $_GET[&quot;signature&quot;];">
   
     <link rel="alternative" href="/atom.xml" title="一个小白的代码之路" type="application/atom+xml">
   
@@ -133,54 +152,110 @@
 </nav>
 
       <div class="body-wrap">
+        <article id="post-PHP微信接收消息" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/09/17/centos7.2下nginx无法访问的问题/" class="archive-article-date">
-  	<time datetime="2016-09-17T04:45:50.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/09/17/centos7.2下nginx无法访问的问题/">centos7.2下nginx无法访问的问题</a>
+    <h1 class="article-title" itemprop="name">
+      PHP微信接收消息
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>微信接受文本消息</code></p>
+<p><a href="https://mp.weixin.qq.com/wiki/17/f298879f8fb29ab98b2f2971d42552fd.html" target="_blank" rel="external">微信官方文档</a></p>
+<blockquote>
+<p>php代码</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">&lt;?php</span></div><div class="line"></div><div class="line">     vaild();</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">vaild</span><span class="params">()</span></span>&#123;</div><div class="line">        $signature = $_GET[<span class="string">"signature"</span>];</div><div class="line">        $timestamp = $_GET[<span class="string">"timestamp"</span>];</div><div class="line">        $nonce = $_GET[<span class="string">"nonce"</span>];</div><div class="line">        $echostr = $_GET[<span class="string">"echostr"</span>];</div><div class="line">        $token = TOKEN;</div><div class="line">        $tmpArr = <span class="keyword">array</span>($token, $timestamp, $nonce);</div><div class="line">        sort($tmpArr, SORT_STRING);</div><div class="line">        $tmpStr = implode( $tmpArr );</div><div class="line">        $tmpStr = sha1( $tmpStr );</div><div class="line"></div><div class="line">        <span class="keyword">if</span>( $tmpStr == $signature &amp;&amp; echostr)&#123;</div><div class="line">            <span class="keyword">echo</span> $echostr;</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">       &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    responseMsg();</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">function</span> <span class="title">responseMsg</span><span class="params">()</span></span>&#123;</div><div class="line">            $info = file_get_contents(<span class="string">"php://input"</span>);</div><div class="line">            $postObj = simplexml_load_string($info);</div><div class="line">            $toUser     = $postObj-&gt;FromUserName;</div><div class="line">            $fromUser  = $postObj-&gt;ToUserName;</div><div class="line">            $time       = time();</div><div class="line">            $msgType    = $postObj-&gt;MsgType;</div><div class="line">            $content    = <span class="string">'你好啊'</span>;</div><div class="line">            $template   = <span class="string">'&lt;xml&gt;</span></div><div class="line">                            &lt;ToUserName&gt;&lt;![CDATA[%s]]&gt;&lt;/ToUserName&gt;</div><div class="line">                            &lt;FromUserName&gt;&lt;![CDATA[%s]]&gt;&lt;/FromUserName&gt;</div><div class="line">                            &lt;CreateTime&gt;%s&lt;/CreateTime&gt;</div><div class="line">                            &lt;MsgType&gt;&lt;![CDATA[%s]]&gt;&lt;/MsgType&gt;</div><div class="line">                            &lt;Content&gt;&lt;![CDATA[%s]]&gt;&lt;/Content&gt;</div><div class="line">                            &lt;/xml&gt;';</div><div class="line">            $response = sprintf($template,$toUser,$fromUser,$time,$msgType,$content);</div><div class="line"></div><div class="line">            file_put_contents(<span class="string">'./response.html'</span>, $response);</div><div class="line"></div><div class="line">            <span class="keyword">echo</span> $response;</div><div class="line"></div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<p><strong>注:关于使用$_GLOBALS[‘HTTP_RAW_POST_DATA’]取不到值得问题，需要在php.ini,中另行配置，这种用法在新版本中已经说明以后不会再用，用file_get_contents(“php://input”)来获得</strong></p>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/09/21/PHP微信接收消息/" class="archive-article-date">
+  	<time datetime="2016-09-21T15:01:30.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-21</time>
+</a>
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos7-2/">centos7.2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firewalld/">firewalld</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xml/">xml</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/09/20/PHP接入微信公众号获取access-token/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PHP接入微信公众号获取access_token</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+	    <a class="jiathis_button_twitter"></a>
+	    <a class="jiathis_button_plus"></a> 
+	    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="PHP微信接收消息" data-title="PHP微信接收消息" data-url="http://yoursite.com/2016/09/21/PHP微信接收消息/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"wulei123"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 
       </div>
@@ -203,9 +278,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/"
