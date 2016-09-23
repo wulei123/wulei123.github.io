@@ -135,6 +135,63 @@
       <div class="body-wrap">
         
   
+    <article id="post-微信网站接入之获取用户信息" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/22/微信网站接入之获取用户信息/">微信网站接入之获取用户信息</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>本篇讲微信网站接入的php简单实现</code></p>
+<blockquote>
+<p>首先在网站接入填写你要回调的url，具体写法请自行看文档,然后新建request.php和response.php文件</p>
+</blockquote>
+<p>request.php:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">define(<span class="string">'APPID'</span>, YOUR_APP_ID);</div><div class="line">define(<span class="string">'APPSECRET'</span>, YOUR_APP_SECRET);</div><div class="line"></div><div class="line"></div><div class="line">define(<span class="string">'REDRIECT_URL'</span>, urlencode(RESRIECT_URL));<span class="comment">//这个地方要把回调的网址解析下</span></div><div class="line">$url = <span class="string">'https://open.weixin.qq.com/connect/oauth2/authorize?appid='</span>.APPID.<span class="string">'&amp;redirect_uri='</span>.REDRIECT_URL.<span class="string">'&amp;response_type=code&amp;scope=snsapi_userinfo&amp;state=STATE#wechat_redirect'</span>;</div><div class="line"></div><div class="line"> <span class="meta">?&gt;</span></div><div class="line"></div><div class="line"></div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;title&gt;weixinOauth&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;a href=<span class="string">"&lt;?php echo $url ?&gt;"</span>&gt;进行认证&lt;/a&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>response.php:</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">&lt;?php</span></div><div class="line"></div><div class="line">        <span class="comment">//如果不放在一起的话 重新define下</span></div><div class="line">        <span class="comment">/*define('APPID', YOUR_APP_ID);</span></div><div class="line">        define('APPSECRET', YOUR_APP_SECRET);*/</div><div class="line"></div><div class="line">        $code = $_GET[<span class="string">'code'</span>];</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">        $outInfo = file_get_contents(<span class="string">'https://api.weixin.qq.com/sns/oauth2/access_token?appid='</span>.APPID.<span class="string">'&amp;secret='</span>.APPSECRET.<span class="string">'&amp;code='</span>.$code.<span class="string">'&amp;grant_type=authorization_code'</span>);</div><div class="line"></div><div class="line"></div><div class="line">        $outInfo = json_decode($outInfo,<span class="keyword">TRUE</span>);</div><div class="line"></div><div class="line">        $access_token = $outInfo[<span class="string">'access_token'</span>];</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">        $userInfo = file_get_contents(<span class="string">'https://api.weixin.qq.com/sns/userinfo?access_token='</span>.$access_token.<span class="string">'&amp;openid=OPENID&amp;lang=zh_CN'</span>);</div><div class="line"></div><div class="line">        <span class="keyword">echo</span> $userInfo;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/09/22/微信网站接入之获取用户信息/" class="archive-article-date">
+  	<time datetime="2016-09-22T08:36:49.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-22</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-PHP微信接收消息" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
