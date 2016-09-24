@@ -4,33 +4,45 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>微信生成二维码 | 一个小白的代码之路</title>
+  <title>php和jQuery实现ajax无刷新文件上传(最简单实现) | 一个小白的代码之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="微信生成二维码接口调用
-微信官方文档
+  <meta name="description" content="最简单的ajax文件上传的最基本配置
+需要了解的：
 
-php 代码
+jQuery ajax - ajax() 方法 参数
+javascrptFormData对象
 
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677&amp;lt;?phpheader(&quot;Content-Typ">
+
+index.html:
+
+123456789101112131415161718192021222324252627282930313233343536373839404142&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微信生成二维码">
-<meta property="og:url" content="http://yoursite.com/2016/09/23/微信生成二维码/index.html">
+<meta property="og:title" content="php和jQuery实现ajax无刷新文件上传(最简单实现)">
+<meta property="og:url" content="http://yoursite.com/2016/09/24/php和jQuery实现ajax无刷新文件上传/index.html">
 <meta property="og:site_name" content="一个小白的代码之路">
-<meta property="og:description" content="微信生成二维码接口调用
-微信官方文档
+<meta property="og:description" content="最简单的ajax文件上传的最基本配置
+需要了解的：
 
-php 代码
+jQuery ajax - ajax() 方法 参数
+javascrptFormData对象
 
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677&amp;lt;?phpheader(&quot;Content-Typ">
-<meta property="og:updated_time" content="2016-09-23T12:14:12.856Z">
+
+index.html:
+
+123456789101112131415161718192021222324252627282930313233343536373839404142&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt">
+<meta property="og:updated_time" content="2016-09-24T13:25:02.660Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="微信生成二维码">
-<meta name="twitter:description" content="微信生成二维码接口调用
-微信官方文档
+<meta name="twitter:title" content="php和jQuery实现ajax无刷新文件上传(最简单实现)">
+<meta name="twitter:description" content="最简单的ajax文件上传的最基本配置
+需要了解的：
 
-php 代码
+jQuery ajax - ajax() 方法 参数
+javascrptFormData对象
 
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677&amp;lt;?phpheader(&quot;Content-Typ">
+
+index.html:
+
+123456789101112131415161718192021222324252627282930313233343536373839404142&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt">
   
     <link rel="alternative" href="/atom.xml" title="一个小白的代码之路" type="application/atom+xml">
   
@@ -152,7 +164,7 @@ php 代码
 </nav>
 
       <div class="body-wrap">
-        <article id="post-微信生成二维码" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-php和jQuery实现ajax无刷新文件上传" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -162,7 +174,7 @@ php 代码
         
   
     <h1 class="article-title" itemprop="name">
-      微信生成二维码
+      php和jQuery实现ajax无刷新文件上传(最简单实现)
     </h1>
   
 
@@ -170,24 +182,32 @@ php 代码
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><code>微信生成二维码接口调用</code></p>
-<p><a href="https://mp.weixin.qq.com/wiki/18/167e7d94df85d8389df6c94a7a8f78ba.html" target="_blank" rel="external">微信官方文档</a></p>
+        <p><code>最简单的ajax文件上传的最基本配置</code></p>
+<p><code>需要了解的：</code></p>
+<ol>
+<li><a href="http://www.w3school.com.cn/jquery/ajax_ajax.asp" target="_blank" rel="external">jQuery ajax - ajax() 方法 参数</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Using_FormData_Objects" target="_blank" rel="external">javascrpt<br>FormData对象</a></li>
+</ol>
 <blockquote>
-<p>php 代码</p>
+<p>index.html:</p>
 </blockquote>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">&lt;?php</span></div><div class="line"></div><div class="line">header(<span class="string">"Content-Type:text/html;charset=utf-8"</span>);</div><div class="line"></div><div class="line">    define(<span class="string">'APP_ID'</span>, <span class="string">'wxe6c4da46a7d21c97'</span>);</div><div class="line">    define(<span class="string">'APP_SECRET'</span>,<span class="string">'8a95f83abf01ab1f2a627febfa83a933'</span>);</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">get_access_token</span><span class="params">()</span></span>&#123;</div><div class="line">        <span class="keyword">if</span>(file_exists(<span class="string">'./token'</span>) &amp;&amp; time()-fileatime(<span class="string">'./token'</span>)&lt;<span class="number">5000</span>)&#123;</div><div class="line">            $at = file_get_contents(<span class="string">'./token'</span>);</div><div class="line">            $at = json_decode($at,<span class="keyword">true</span>);<span class="comment">//当此处为true时，返回的是数组而非对象</span></div><div class="line">            <span class="keyword">return</span> $at[<span class="string">'access_token'</span>];</div><div class="line">        &#125;<span class="keyword">else</span>&#123;</div><div class="line">            $at = file_get_contents(<span class="string">'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid='</span>.APP_ID.<span class="string">'&amp;secret='</span>.APP_SECRET);</div><div class="line">            file_put_contents(<span class="string">'./token'</span>,$at);</div><div class="line">            $at = json_decode($at,<span class="keyword">true</span>);<span class="comment">//当此处为true时，返回的是数组而非对象</span></div><div class="line">            <span class="keyword">return</span> $at[<span class="string">'access_token'</span>];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    $postdata = [</div><div class="line"></div><div class="line">    <span class="string">'expire_seconds'</span>=&gt;<span class="number">2592000</span>,</div><div class="line">    <span class="string">'action_name'</span>   =&gt;<span class="string">'QR_SCENE'</span>,</div><div class="line">    <span class="string">'action_info'</span>   =&gt;[<span class="string">'scene'</span>=&gt;[<span class="string">'scene_id'</span>=&gt;<span class="number">123</span>]]</div><div class="line"></div><div class="line">    ];</div><div class="line"></div><div class="line"></div><div class="line">    $ticket = get_ticket($postdata);</div><div class="line"></div><div class="line">    $ticket = urlencode($ticket);<span class="comment">//解析ticket</span></div><div class="line"></div><div class="line">    $pic = file_get_contents(<span class="string">"https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=$ticket"</span>);</div><div class="line"></div><div class="line">    file_put_contents(<span class="string">'./test.jpg'</span>,$pic);</div><div class="line"></div><div class="line">    <span class="keyword">echo</span> <span class="string">'图片生成完成'</span>;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">get_ticket</span><span class="params">($data)</span></span>&#123;</div><div class="line">        $access_token = get_access_token();</div><div class="line"></div><div class="line">    $url = <span class="string">"https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=$access_token"</span>;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    $data = json_encode($data);</div><div class="line"></div><div class="line">    $ch = curl_init();</div><div class="line"></div><div class="line">    curl_setopt($ch,CURLOPT_URL,$url);</div><div class="line"></div><div class="line">    curl_setopt($ch,CURLOPT_POST,<span class="number">1</span>);</div><div class="line"></div><div class="line">    curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,<span class="keyword">FALSE</span>);</div><div class="line"></div><div class="line">    curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,<span class="keyword">FALSE</span>);</div><div class="line"></div><div class="line">    curl_setopt($ch,CURLOPT_RETURNTRANSFER,<span class="keyword">TRUE</span>);<span class="comment">//设为TRUE时当做变量储存,若设为FALSE那么会打印出来，不会作为变量储存,默认是打印的</span></div><div class="line"></div><div class="line">    curl_setopt($ch,CURLOPT_POSTFIELDS,$data);</div><div class="line"></div><div class="line">    $outInfo = curl_exec($ch);</div><div class="line"></div><div class="line">    curl_close($ch);</div><div class="line"></div><div class="line">    $outInfo = json_decode($outInfo,<span class="keyword">TRUE</span>);</div><div class="line"></div><div class="line">    $ticket = $outInfo[<span class="string">'ticket'</span>];</div><div class="line"></div><div class="line">    <span class="keyword">return</span> $ticket;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>upload<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"POST"</span> <span class="attr">id</span>=<span class="string">"uploadImg"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"images"</span>&gt;</span>上传图片:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"myfile"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"></div><div class="line">    $(document).ready(function ()&#123;</div><div class="line">        $('#uploadImg').on('submit',function(e)&#123;</div><div class="line">            e.preventDefault();</div><div class="line">            $.ajax(&#123;</div><div class="line">                url:'upload.php',</div><div class="line">                type:'post',</div><div class="line">                data: new FormData(this),</div><div class="line">                /*利用FormData对象,你可以使用一系列的键值对来模拟一个完整的表单,然后使用XMLHttpRequest发送这个"表单".*/</div><div class="line">                processData:false,</div><div class="line">                /*默认值: "application/x-www-form-urlencoded"。发送信息至服务器时内容编码类型。</div><div class="line">默认值适合大多数情况。如果你明确地传递了一个 content-type 给 $.ajax() 那么它必定会发送给服务器（即使没有数据要发送）。必写*/</div><div class="line">                // cache: false,</div><div class="line">                contentType:false,</div><div class="line">                /*默认值: true。默认情况下，通过data选项传递进来的数据，如果是一个对象(技术上讲只要不是字符串)，都会处理转化成一个查询字符串，以配合默认内容类型 "application/x-www-form-urlencoded"。如果要发送 DOM 树信息或其它不希望转换的信息，请设置为 false。必写*/</div><div class="line">                success:function(data)&#123;</div><div class="line">                    alert(data);</div><div class="line">                &#125;</div><div class="line"></div><div class="line">            &#125;)</div><div class="line">        &#125;)</div><div class="line">    &#125;)</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>upload.php:(写的比较简单)</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"></div><div class="line"></div><div class="line">	$sourcePath = $_FILES[<span class="string">'myfile'</span>][<span class="string">'tmp_name'</span>];</div><div class="line"></div><div class="line">	$targetPath = $_FILES[<span class="string">'myfile'</span>][<span class="string">'name'</span>];</div><div class="line"></div><div class="line"></div><div class="line">	move_uploaded_file($sourcePath, $targetPath);</div><div class="line"></div><div class="line">	<span class="keyword">echo</span> <span class="string">'success'</span>;</div></pre></td></tr></table></figure>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/09/23/微信生成二维码/" class="archive-article-date">
-  	<time datetime="2016-09-23T12:08:12.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-23</time>
+      <a href="/2016/09/24/php和jQuery实现ajax无刷新文件上传/" class="archive-article-date">
+  	<time datetime="2016-09-24T13:01:16.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-24</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ajax/">ajax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/文件上传/">文件上传</a></li></ul>
 	</div>
 
       
@@ -200,18 +220,9 @@ php 代码
   
 <nav id="article-nav">
   
-    <a href="/2016/09/24/php和jQuery实现ajax无刷新文件上传/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          php和jQuery实现ajax无刷新文件上传(最简单实现)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/09/22/微信网站接入之获取用户信息/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">微信网站接入之获取用户信息</div>
+    <a href="/2016/09/23/微信生成二维码/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微信生成二维码</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -245,7 +256,7 @@ php 代码
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="微信生成二维码" data-title="微信生成二维码" data-url="http://yoursite.com/2016/09/23/微信生成二维码/"></div>
+	<div class="ds-thread" data-thread-key="php和jQuery实现ajax无刷新文件上传" data-title="php和jQuery实现ajax无刷新文件上传(最简单实现)" data-url="http://yoursite.com/2016/09/24/php和jQuery实现ajax无刷新文件上传/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
