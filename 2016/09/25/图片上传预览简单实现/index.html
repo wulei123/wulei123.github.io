@@ -4,33 +4,30 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>PHP微信自定义菜单实现 | 一个小白的代码之路</title>
+  <title>图片上传预览简单实现 | 一个小白的代码之路</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="简单实现微信的自定义菜单
-查看微信官方文档
+  <meta name="description" content="这是基于jquery的文件上传预览的简单实现，忽略样式啥的，麻烦还容易误导人
 
-php代码
+index.html
 
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273&amp;lt;?php	define(&apos;ACCESS_TOKEN&apos;,YO">
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667&amp;lt;!DOCTYPE html&amp;gt;&amp;l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PHP微信自定义菜单实现">
-<meta property="og:url" content="http://yoursite.com/2016/09/19/PHP微信自定义菜单实现/index.html">
+<meta property="og:title" content="图片上传预览简单实现">
+<meta property="og:url" content="http://yoursite.com/2016/09/25/图片上传预览简单实现/index.html">
 <meta property="og:site_name" content="一个小白的代码之路">
-<meta property="og:description" content="简单实现微信的自定义菜单
-查看微信官方文档
+<meta property="og:description" content="这是基于jquery的文件上传预览的简单实现，忽略样式啥的，麻烦还容易误导人
 
-php代码
+index.html
 
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273&amp;lt;?php	define(&apos;ACCESS_TOKEN&apos;,YO">
-<meta property="og:updated_time" content="2016-09-23T12:09:50.023Z">
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667&amp;lt;!DOCTYPE html&amp;gt;&amp;l">
+<meta property="og:updated_time" content="2016-09-25T01:38:52.108Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PHP微信自定义菜单实现">
-<meta name="twitter:description" content="简单实现微信的自定义菜单
-查看微信官方文档
+<meta name="twitter:title" content="图片上传预览简单实现">
+<meta name="twitter:description" content="这是基于jquery的文件上传预览的简单实现，忽略样式啥的，麻烦还容易误导人
 
-php代码
+index.html
 
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273&amp;lt;?php	define(&apos;ACCESS_TOKEN&apos;,YO">
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667&amp;lt;!DOCTYPE html&amp;gt;&amp;l">
   
     <link rel="alternative" href="/atom.xml" title="一个小白的代码之路" type="application/atom+xml">
   
@@ -152,7 +149,7 @@ php代码
 </nav>
 
       <div class="body-wrap">
-        <article id="post-PHP微信自定义菜单实现" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-图片上传预览简单实现" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -162,7 +159,7 @@ php代码
         
   
     <h1 class="article-title" itemprop="name">
-      PHP微信自定义菜单实现
+      图片上传预览简单实现
     </h1>
   
 
@@ -170,27 +167,27 @@ php代码
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><code>简单实现微信的自定义菜单</code></p>
-<p><a href="https://mp.weixin.qq.com/wiki/10/0234e39a2025342c17a7d23595c6b40a.html" target="_blank" rel="external">查看微信官方文档</a></p>
+        <p><code>这是基于jquery的文件上传预览的简单实现，忽略样式啥的，麻烦还容易误导人</code></p>
 <blockquote>
-<p>php代码</p>
+<p>index.html</p>
 </blockquote>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">&lt;?php</span></div><div class="line">	define(<span class="string">'ACCESS_TOKEN'</span>,YOUR_TOKEN);</div><div class="line"></div><div class="line"><span class="comment">//创建菜单</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMenu</span><span class="params">($data)</span></span>&#123;</div><div class="line">$curl = curl_init();</div><div class="line">curl_setopt($curl, CURLOPT_URL, <span class="string">"https://api.weixin.qq.com/cgi-bin/menu/create?access_token="</span>.ACCESS_TOKEN);<span class="comment">//	需要获取的URL地址，也可以在curl_init()函数中设置。</span></div><div class="line"><span class="comment">// curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");</span></div><div class="line">curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, <span class="keyword">FALSE</span>);<span class="comment">//	禁用后cURL将终止从服务端进行验证。使用CURLOPT_CAINFO选项设置证书使用CURLOPT_CAPATH选项设置证书目录 如果CURLOPT_SSL_VERIFYPEER(默认值为2)被启用，CURLOPT_SSL_VERIFYHOST需要被设置成TRUE否则设置为FALSE。	自cURL 7.10开始默认为TRUE。从cURL 7.10开始默认绑定安装。</span></div><div class="line">curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, <span class="keyword">FALSE</span>);<span class="comment">//	1 检查服务器SSL证书中是否存在一个公用名(common name)。译者注：公用名(Common Name)一般来讲就是填写你将要申请SSL证书的域名 (domain)或子域名(sub domain)。2 检查公用名是否存在，并且是否与提供的主机名匹配。</span></div><div class="line">curl_setopt($curl, CURLOPT_USERAGENT, <span class="string">'Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)'</span>);<span class="comment">//在HTTP请求中包含一个"User-Agent: "头的字符串。</span></div><div class="line">curl_setopt($curl, CURLOPT_FOLLOWLOCATION, <span class="number">1</span>);<span class="comment">//	启用时会将服务器服务器返回的"Location: "放在header中递归的返回给服务器，使用CURLOPT_MAXREDIRS可以限定递归返回的数量。</span></div><div class="line">curl_setopt($curl, CURLOPT_AUTOREFERER, <span class="number">1</span>);<span class="comment">//	当根据Location:重定向时，自动设置header中的Referer:信息。</span></div><div class="line">curl_setopt($curl, CURLOPT_POSTFIELDS, $data);<span class="comment">//	全部数据使用HTTP协议中的"POST"操作来发送。要发送文件，在文件名前面加上@前缀并使用完整路径。这个参数可以通过urlencoded后的字符串类似'para1=val1&amp;para2=val2&amp;...'或使用一个以字段名为键值，字段数据为值的数组。如果value是一个数组，Content-Type头将会被设置成multipart/form-data。</span></div><div class="line">curl_setopt($curl, CURLOPT_RETURNTRANSFER, <span class="keyword">true</span>);<span class="comment">//在启用CURLOPT_RETURNTRANSFER的时候，返回原生的（Raw）输出。</span></div><div class="line">$tmpInfo = curl_exec($curl);</div><div class="line"><span class="keyword">if</span> (curl_errno($curl)) &#123;</div><div class="line">  <span class="keyword">return</span> curl_error($curl);</div><div class="line">&#125;</div><div class="line">curl_close($curl);</div><div class="line"><span class="keyword">return</span> $tmpInfo;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//获取菜单</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getMenu</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="keyword">return</span> file_get_contents(<span class="string">"https://api.weixin.qq.com/cgi-bin/menu/get?access_token="</span>.ACCESS_TOKEN);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//删除菜单</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">deleteMenu</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="keyword">return</span> file_get_contents(<span class="string">"https://api.weixin.qq.com/cgi-bin/menu/delete?access_token="</span>.ACCESS_TOKEN);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">$data = <span class="string">' &#123;</span></div><div class="line">     "button":[</div><div class="line">     &#123;</div><div class="line">          "type":"click",</div><div class="line">          "name":"今日歌曲",</div><div class="line">          "key":"V1001_TODAY_MUSIC"</div><div class="line">      &#125;,</div><div class="line">      &#123;</div><div class="line">           "name":"菜单",</div><div class="line">           "sub_button":[</div><div class="line">           &#123;</div><div class="line">               "type":"view",</div><div class="line">               "name":"搜索",</div><div class="line">               "url":"http://www.soso.com/"</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               "type":"view",</div><div class="line">               "name":"视频",</div><div class="line">               "url":"http://v.qq.com/"</div><div class="line">            &#125;,</div><div class="line">            &#123;</div><div class="line">               "type":"click",</div><div class="line">               "name":"赞一下我们",</div><div class="line">               "key":"V1001_GOOD"</div><div class="line">            &#125;]</div><div class="line">       &#125;]</div><div class="line"> &#125;';</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">echo</span> createMenu($data);</div><div class="line"><span class="keyword">echo</span> getMenu();</div><div class="line"><span class="keyword">echo</span> deleteMenu();</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>testReaderDemo<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"POST"</span> <span class="attr">id</span>=<span class="string">"uploadImg"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"images"</span>&gt;</span>上传图片:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"myfile"</span> <span class="attr">id</span>=<span class="string">"file"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"submit"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">img</span> <span class="attr">id</span>=<span class="string">"img"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></div><div class="line"></div><div class="line">	$(document).ready(function()&#123;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">		$('#uploadImg').on('submit',function(e)&#123;</div><div class="line">            e.preventDefault();</div><div class="line">            $.ajax(&#123;</div><div class="line">                url:'upload.php',</div><div class="line">                type:'post',</div><div class="line">                data: new FormData(this),</div><div class="line">                processData:false,</div><div class="line">                cache: false,</div><div class="line">                contentType:false,</div><div class="line">                success:function(data)&#123;</div><div class="line">                    alert(data);</div><div class="line">                &#125;</div><div class="line"></div><div class="line">            &#125;)</div><div class="line">        &#125;)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">		$('#file').change(function () &#123;</div><div class="line"></div><div class="line">			var file = this.files[0];</div><div class="line"></div><div class="line">            var match = ["image/jpeg", "image/png", "image/jpg"];//用来判断是否为图片</div><div class="line"></div><div class="line">            if(file.type == match[0]||files.type == match[1]||files.type == match[2])&#123;</div><div class="line"></div><div class="line">            var reader = new FileReader();//实例化fileReader对象</div><div class="line"></div><div class="line">			reader.readAsDataURL(file);//取出文件位置</div><div class="line"></div><div class="line">			reader.onload = function (e)&#123;$('#img').attr('src',e.target.result);&#125;//将文件位置URL赋给img</div><div class="line"></div><div class="line">            &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">		&#125;)</div><div class="line"></div><div class="line"></div><div class="line">	&#125;)</div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <blockquote>
-<p>看一下返回的json就知道是不是接入成功啦</p>
+<p>upload.php</p>
 </blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="meta">&lt;?php</span></div><div class="line"></div><div class="line"></div><div class="line">	$sourcePath = $_FILES[<span class="string">'myfile'</span>][<span class="string">'tmp_name'</span>];</div><div class="line"></div><div class="line">	$targetPath = $_FILES[<span class="string">'myfile'</span>][<span class="string">'name'</span>];</div><div class="line"></div><div class="line"></div><div class="line">	move_uploaded_file($sourcePath, $targetPath);</div><div class="line"></div><div class="line">	<span class="keyword">echo</span> <span class="string">'success'</span>;</div></pre></td></tr></table></figure>
 
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/09/19/PHP微信自定义菜单实现/" class="archive-article-date">
-  	<time datetime="2016-09-19T15:19:24.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-19</time>
+      <a href="/2016/09/25/图片上传预览简单实现/" class="archive-article-date">
+  	<time datetime="2016-09-25T01:35:51.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-09-25</time>
 </a>
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/curl/">curl</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信开发/">微信开发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
 	</div>
 
       
@@ -203,18 +200,9 @@ php代码
   
 <nav id="article-nav">
   
-    <a href="/2016/09/20/PHP接入微信公众号获取access-token/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          PHP接入微信公众号获取access_token
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/09/18/PHP接入微信公众平台/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">PHP接入微信公众平台</div>
+    <a href="/2016/09/24/php和jQuery实现ajax无刷新文件上传/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">php和jQuery实现ajax无刷新文件上传(最简单实现)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -248,7 +236,7 @@ php代码
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="PHP微信自定义菜单实现" data-title="PHP微信自定义菜单实现" data-url="http://yoursite.com/2016/09/19/PHP微信自定义菜单实现/"></div>
+	<div class="ds-thread" data-thread-key="图片上传预览简单实现" data-title="图片上传预览简单实现" data-url="http://yoursite.com/2016/09/25/图片上传预览简单实现/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
