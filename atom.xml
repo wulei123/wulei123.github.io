@@ -161,9 +161,9 @@
     
       <category term="php" scheme="http://yoursite.com/tags/php/"/>
     
-      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
       <category term="xml" scheme="http://yoursite.com/tags/xml/"/>
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -191,9 +191,9 @@
     
       <category term="php" scheme="http://yoursite.com/tags/php/"/>
     
-      <category term="curl" scheme="http://yoursite.com/tags/curl/"/>
-    
       <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="curl" scheme="http://yoursite.com/tags/curl/"/>
     
   </entry>
   
@@ -221,9 +221,9 @@
     
       <category term="php" scheme="http://yoursite.com/tags/php/"/>
     
-      <category term="curl" scheme="http://yoursite.com/tags/curl/"/>
-    
       <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="curl" scheme="http://yoursite.com/tags/curl/"/>
     
   </entry>
   
